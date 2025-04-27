@@ -17,7 +17,7 @@ export const Hero = () => {
           <span>Артём</span>
 
           <span>
-            <span className="opacity-70 mr-4">&</span> Лена
+            <span className="opacity-70 mr-4">&</span> Eлена
           </span>
         </h1>
       </CardHeader>

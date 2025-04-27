@@ -9,7 +9,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { sendToTelegram } from "./actions";
 import { FormData, Guest } from "./types";
-import bud from "@/assets/bud.webp";
 import { InView } from "@/components/ui/in-view";
 
 const defaultValues: FormData = {
@@ -129,7 +128,7 @@ export const GuestForm = () => {
           <p className="text-center mt-6 text-red-500">
             {formData.attending
               ? "Ждем вас на свадьбе!"
-              : "Если передумаете, будем вас ждать!"}
+              : "Если передумаете, переотправьте форму!"}
           </p>
         </CardContent>
       </Card>
@@ -160,7 +159,7 @@ export const GuestForm = () => {
         viewOptions={{ margin: "0px 0px -200px 0px" }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
-        <CardContent>
+        <CardContent className="relative z-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label>Сможете ли присутствовать на торжестве?</Label>
@@ -200,7 +199,7 @@ export const GuestForm = () => {
             <Button
               type="button"
               variant="secondary"
-              className="w-full "
+              className="w-full relative z-10 "
               onClick={addGuest}
             >
               Добавить гостя
@@ -248,12 +247,6 @@ export const GuestForm = () => {
           </form>
         </CardContent>
       </InView>
-
-      <img
-        alt="flower bud background"
-        src={bud}
-        className="absolute -bottom-[90px] -left-[100px] rotate-[333deg] opacity-40"
-      />
     </Card>
   );
 };

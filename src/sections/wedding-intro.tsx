@@ -44,7 +44,7 @@ export default function WeddingIntro({
               initial={{ scale: 0 }}
               animate={{ scale: [0, 1.2, 1] }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="absolute top-1/2 left-1/2 w-16 h-16 -translate-x-1/2 -translate-y-1/2 text-pink-400"
+              className="absolute top-1/2 left-1/2 w-16 h-16 -translate-x-1/2 -translate-y-1/2 text-red-600"
             >
               <Heart />
             </motion.div>
@@ -54,7 +54,7 @@ export default function WeddingIntro({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: [0, 1, 0], y: [20, -20, -40] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
-              className="absolute top-0 left-4 w-6 h-6 text-pink-300"
+              className="absolute top-0 left-4 w-6 h-6 text-red-500"
             >
               <Heart small />
             </motion.div>
@@ -63,7 +63,7 @@ export default function WeddingIntro({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: [0, 1, 0], y: [20, -20, -40] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 1.5 }}
-              className="absolute top-0 right-4 w-6 h-6 text-pink-300"
+              className="absolute top-0 right-4 w-6 h-6 text-red-500"
             >
               <Heart small />
             </motion.div>

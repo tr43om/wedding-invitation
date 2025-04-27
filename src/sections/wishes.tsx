@@ -20,11 +20,7 @@ const slides = [
     content:
       "От всего сердца просим вас воздержаться от криков «Горько!» и сохранить атмосферу уютного семейного праздника.",
   },
-  {
-    title: "Время",
-    content:
-      "Просим вас прибыть к началу церемонии, чтобы мы могли разделить этот важный момент вместе",
-  },
+
   {
     title: "Вопросы",
     content:
@@ -84,7 +80,7 @@ export const Wishes: React.FC = () => {
       </div>
 
       <nav
-        className="flex gap-7 items-center mt-4"
+        className="flex gap-7 items-center mt-4 relative z-10"
         aria-label="Навигация по слайдам"
       >
         <NavigationButton direction="left" onClick={scrollPrev} />

@@ -3,19 +3,17 @@ import bud from "@/assets/bud.webp";
 import { InView } from "@/components/ui/in-view";
 
 const ladiesColors = [
-  "bg-orange-200",
-  "bg-pink-200",
-  "bg-stone-300",
+  "bg-[#FFF399]",
+  "bg-[#C6D5BB]",
   "bg-slate-300",
   "bg-red-100",
 ];
 
 const gentlemenColors = [
   "bg-zinc-800",
-  "bg-stone-400",
-  "bg-zinc-400",
+  "bg-[#CBB7A6]",
   "bg-zinc-300",
-  "bg-stone-200",
+  "bg-[#F2E7E1]",
 ];
 
 export const DressCode = () => {

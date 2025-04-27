@@ -1,5 +1,6 @@
 import React from "react";
 import { CalendarDayProps } from "../types";
+import circle from "@/assets/circle.png";
 
 export const CalendarDay: React.FC<CalendarDayProps> = ({
   dayName,
@@ -7,17 +8,12 @@ export const CalendarDay: React.FC<CalendarDayProps> = ({
   isHighlighted = false,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-between min-h-[46px] w-[40px] font-medium">
+    <div className="flex flex-col items-center justify-between min-h-[46px] w-[40px] font-medium relative">
       <div className="text-xs font-medium text-black">{dayName}</div>
-      <div
-        className={`text-xl ${
-          isHighlighted
-            ? "mt-1.5 w-7 h-7 flex items-center justify-center text-white rounded-full bg-rose-700 bg-opacity-50 pb-[5px]"
-            : "text-black mt-1.5"
-        }`}
-      >
-        {date}
-      </div>
+      <div className={`text-xl text-black mt-1.5`}>{date}</div>
+      {isHighlighted && (
+        <img src={circle} className="absolute top-[23px] scale-[1.3]" />
+      )}
     </div>
   );
 };
