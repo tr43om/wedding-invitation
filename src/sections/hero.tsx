@@ -14,10 +14,11 @@ export const Hero = () => {
           </h2>
         </div>
         <h1 className="self-start mt-32 text-8xl text-black font-wedding grid">
-          <span>Артём</span>
+          <span className="relative -left-[25px]">Артём</span>
 
           <span>
-            <span className="mr-2 text-zinc-500">&</span> Eлена
+            <span className="relative left-[30px] -top-[10px]">&</span>{" "}
+            <span className="relative -right-[40px]">Eлена</span>
           </span>
         </h1>
       </CardHeader>
