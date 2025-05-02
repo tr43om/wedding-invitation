@@ -5,7 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { sendToTelegram } from "./actions";
 import { FormData, Guest } from "./types";
@@ -146,8 +152,11 @@ export const GuestForm = () => {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         {" "}
-        <CardHeader>
-          <CardTitle className="text-center">Анкета гостя</CardTitle>
+        <CardHeader className="text-center">
+          <CardTitle>Анкета гостя</CardTitle>
+          <CardDescription>
+            Пожалуйста, подтвердите свое присутствие <br /> до 20.07.2025
+          </CardDescription>
         </CardHeader>
       </InView>
 
@@ -199,7 +208,7 @@ export const GuestForm = () => {
             <Button
               type="button"
               variant="secondary"
-              className="w-full relative z-10 "
+              className="w-full relative z-10 bg-[#FFF1F0] text-[#FE5149] hover:bg-[#fce3e1] cursor-pointer"
               onClick={addGuest}
             >
               Добавить гостя
